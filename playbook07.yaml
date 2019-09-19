@@ -1,0 +1,30 @@
+---
+- name: Learning to download images to be used by Cloud
+  hosts: futurama:&UbuntuOS
+  gather_facts: yes
+  become: no
+  vars:
+          dir: "/tmp/images" 
+
+  tasks:
+          - name: Make Dir
+            file:
+                    path: "{{ dir }}"
+                    state: directory
+
+
+          - name: Download file
+            get_url:
+                    url: https://download.cirros-cloud.net/0.4.0/cirros-0.4.0-aarch64-lxc.tar.gz
+                    dest: "{{ dir }}"
+
+          - name: Untar file
+            become: yes
+            unarchive:
+                    src: "{{ dir }}/cirros-0.4.0-aarch64-lxc.tar.gz"
+                    dest: "{{ dir }}"
+                    remote_src: yes
+
+- name: Talk to OpenStack APIs
+  hosts: localhost
+  gather_facts: no

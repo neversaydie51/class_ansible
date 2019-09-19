@@ -1,0 +1,43 @@
+---
+- name: Learning about tagging
+  hosts: futurama
+  gather_facts: yes
+  
+  vars:
+          cargo1: "prizes for a claw crane"
+          cargo2: "popcorn for popcorning enjoyment"
+          cargo3: "stickers for on a rubix cube"
+
+  vars_files:
+          - ~/ans/vars/tagvars.yaml
+
+  tasks:
+          - name: Check dir exists
+            file:
+                    path: ~/output/
+                    state: directory
+
+          - name: Deploy orders to crew
+            template:
+                    src: ~/ans/templates/orders.txt.j2
+                    dest: ~/orders.txt
+            tags:
+                    - orders
+                    - crew
+
+          - name: deploy cargo to manafest
+            template:
+                    src: ~/ans/templates/cargo_manafest.cfg.j2
+                    dest: ~/cargo_manafest.txt
+            tags:
+                    - cargo
+                    - shipprep
+
+          - name: install nav charts
+            template:
+                    src: ~/ans/templates/navigation_charts.txt.j2
+                    dest: ~/navigation_charts.cfg
+            tags:
+                    - shipprep
+                    - nav
+

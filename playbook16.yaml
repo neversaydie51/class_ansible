@@ -1,0 +1,16 @@
+---
+- name: Pusha script to server
+  hosts: futurama
+  gather_facts: yes
+
+  tasks:
+  
+  - name: run script
+    script: /home/student/py/holamundo.py
+    args:
+      executable: python3
+    register: results
+
+  - name: What did holamundo produce
+    debug:
+      var: results

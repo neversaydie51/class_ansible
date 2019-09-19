@@ -1,0 +1,53 @@
+Sep 18 06:25:49 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.91.157
+Sep 18 06:47:38 ansible-114-bchd systemd[1]: Starting Daily apt upgrade and clean activities...
+Sep 18 06:47:41 ansible-114-bchd systemd[1]: Started Daily apt upgrade and clean activities.
+Sep 18 07:09:29 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.94.4
+Sep 18 07:13:50 ansible-114-bchd gotty[977]: 2019/09/18 07:13:50 New client connected: 10.0.0.33:38388
+Sep 18 07:13:50 ansible-114-bchd gotty[977]: 2019/09/18 07:13:50 Command is running for client 10.0.0.33:38388 with PID 22696 (args="new -A -s gotty"), connections: 1
+Sep 18 07:13:50 ansible-114-bchd gotty[977]: 2019/09/18 07:13:50 10.0.0.33:38388 101 GET /ws
+Sep 18 07:17:01 ansible-114-bchd CRON[22701]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 08:07:10 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.89.199
+Sep 18 08:12:53 ansible-114-bchd systemd[1]: Starting Message of the Day...
+Sep 18 08:12:54 ansible-114-bchd 50-motd-news[22718]:  * Congrats to the Kubernetes community on 1.16 beta 1! Now available
+Sep 18 08:12:54 ansible-114-bchd 50-motd-news[22718]:    in MicroK8s for evaluation and testing, with upgrades to RC and GA
+Sep 18 08:12:54 ansible-114-bchd 50-motd-news[22718]:      snap info microk8s
+Sep 18 08:12:54 ansible-114-bchd systemd[1]: Started Message of the Day.
+Sep 18 08:17:01 ansible-114-bchd CRON[22774]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 08:31:00 ansible-114-bchd gotty[977]: 2019/09/18 08:31:00 New client connected: 10.0.0.33:38442
+Sep 18 08:31:00 ansible-114-bchd gotty[977]: 2019/09/18 08:31:00 Command is running for client 10.0.0.33:38442 with PID 22779 (args="new -A -s gotty"), connections: 2
+Sep 18 08:31:00 ansible-114-bchd gotty[977]: 2019/09/18 08:31:00 10.0.0.33:38442 101 GET /ws
+Sep 18 08:32:03 ansible-114-bchd gotty[977]: 2019/09/18 08:32:03 websocket: close 1006 unexpected EOF
+Sep 18 08:32:03 ansible-114-bchd gotty[977]: 2019/09/18 08:32:03 Command exited for: 10.0.0.33:38388
+Sep 18 08:32:03 ansible-114-bchd gotty[977]: 2019/09/18 08:32:03 Connection closed: 10.0.0.33:38388, connections: 1
+Sep 18 08:38:31 ansible-114-bchd gotty[977]: 2019/09/18 08:38:31 New client connected: 10.0.0.33:38476
+Sep 18 08:38:31 ansible-114-bchd gotty[977]: 2019/09/18 08:38:31 Command is running for client 10.0.0.33:38476 with PID 22782 (args="new -A -s gotty"), connections: 2
+Sep 18 08:38:31 ansible-114-bchd gotty[977]: 2019/09/18 08:38:31 10.0.0.33:38476 101 GET /ws
+Sep 18 08:39:53 ansible-114-bchd gotty[977]: 2019/09/18 08:39:53 websocket: close 1006 unexpected EOF
+Sep 18 08:39:53 ansible-114-bchd gotty[977]: 2019/09/18 08:39:53 Command exited for: 10.0.0.33:38442
+Sep 18 08:39:53 ansible-114-bchd gotty[977]: 2019/09/18 08:39:53 Connection closed: 10.0.0.33:38442, connections: 1
+Sep 18 09:10:02 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.94.4
+Sep 18 09:17:01 ansible-114-bchd CRON[22794]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 09:33:31 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.89.199
+Sep 18 09:52:36 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.89.198
+Sep 18 09:55:25 ansible-114-bchd systemd-resolved[665]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+Sep 18 10:09:38 ansible-114-bchd systemd[1]: Starting Daily apt download activities...
+Sep 18 10:10:08 ansible-114-bchd apt-helper[23127]: E: Sub-process nm-online returned an error code (1)
+Sep 18 10:10:09 ansible-114-bchd systemd-resolved[665]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+Sep 18 10:10:09 ansible-114-bchd systemd-resolved[665]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+Sep 18 10:10:26 ansible-114-bchd systemd[1]: Started Daily apt download activities.
+Sep 18 10:17:01 ansible-114-bchd CRON[23584]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 11:17:01 ansible-114-bchd CRON[23609]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 11:36:05 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.91.157
+Sep 18 11:59:57 ansible-114-bchd systemd-resolved[665]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+Sep 18 12:00:16 ansible-114-bchd systemd-resolved[665]: message repeated 2 times: [ Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.]
+Sep 18 12:17:01 ansible-114-bchd CRON[24656]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 12:54:59 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.94.4
+Sep 18 13:17:01 ansible-114-bchd CRON[24672]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 13:20:15 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.91.157
+Sep 18 13:35:45 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.89.198
+Sep 18 14:09:49 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.89.199
+Sep 18 14:17:01 ansible-114-bchd CRON[24711]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 14:51:10 ansible-114-bchd systemd-resolved[665]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+Sep 18 15:17:01 ansible-114-bchd CRON[25962]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 18 15:18:47 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.89.198
+Sep 18 15:21:14 ansible-114-bchd chronyd[1017]: Received KoD RATE from 91.189.91.157

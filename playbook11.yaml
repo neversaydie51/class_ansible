@@ -1,0 +1,10 @@
+---
+- name: Playbook with line in file
+  hosts: localhost
+
+  vars:
+          fileloc: "~/sys.log"
+
+  tasks:
+          - name: "Insert a line into {{ fileloc }}"
+            lineinfile: 

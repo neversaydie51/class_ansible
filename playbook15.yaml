@@ -1,0 +1,81 @@
+---
+- name: Error Handling
+  host: futurama
+  vars:
+          oses:
+                  ['Debian','RedHat']
+  
+  tasks:
+          - name: prechecking
+            block:
+                    - name: Activate the fail module when not redhat or debian
+                      fail:
+                              msg: System does not appear to be RH or debian
+                      when: ansible_os_family not in oses
+  
+                    - name: set facts - Success
+                      set_fact:
+                              result: SUCCESS
+  
+            rescue:
+                    - name: Set a fact - Failed
+                      set_fact:
+                              result: FAILED
+  
+                    - name: Exit the playbook
+                      fail:
+                              msg: Prechecking PHASE FAILED! EXITING PLAYBOOK.
+  
+            always:
+                    - name: Write a log entry
+                      lineinfile:
+                              path: ~/errorhandling.log
+                              line: "{{ ansible_date_time.epoch }} - Ended precheck phase - {{ inventory_hostname }} - {{ result }}"
+  
+         - name: maintenance
+           block:
+                   - name: Attempt to install some apps with apt
+                     apt:
+                             name: [bastet, sl, ninvaders]
+                             state: present
+                     become: yes
+                     when: ansible_os_family == 'Debian'
+  
+                   - name: attemp instal with ym
+                     yum:
+                             name: [bastet, sl, ninvaders]
+                             state: present
+                     become: yes
+                     when: ansible_os_family == 'Redhat'
+
+                   - name: maintenance finished
+                     set_fact:
+                             result: SUCCESS
+           rescue:
+                   - name: Attempt to install some apps with apt
+                     apt:
+                             name: [bastet, sl, ninvaders]
+                             state: present
+                     become: yes
+                     when: ansible_os_family == 'Debian'
+  
+                   - name: attemp instal with ym
+                     yum:
+                             name: [bastet, sl, ninvaders]
+                             state: present
+                     become: yes
+                     when: ansible_os_family == 'Redhat'
+                   
+                   - name: maintenance failed
+                     set_fact:
+                             result: Failed
+
+                   - name: maintenance phase FAILED
+                     fail:
+                             msg: "FISSION MAILED! {{ inventory_hostname }}"
+            always:
+                   - name: Write a log entry
+                     lineinfile:
+                             path: ~/errorhandling.log
+                             line: "{{ ansible_date_time.epoch }} - Ended maintenance phase - {{ inventory_hostname }} - {{ result }}" 
+                     delegate_to: localhost
