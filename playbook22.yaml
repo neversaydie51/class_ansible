@@ -1,0 +1,13 @@
+---
+- name: learning about valut
+  hosts: futurama
+
+  vars_files:
+          - vars/creds.yaml
+  tasks:
+          - name: print out values within creds.yaml
+            debug:
+                    var: ansible_ssh_pass
+
+          - name: print out values
+
